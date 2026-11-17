@@ -543,7 +543,106 @@ a { color: var(--tide); text-underline-offset: 0.18em; }
   font-size: var(--step--1);
   color: var(--muted);
 }
-.faq__more { margin-top: 2.5rem; text-align: center; }
+.faq__heading {
+  max-width: 52rem;
+  margin: 0 auto 1.25rem;
+  font-size: var(--step-2);
+  color: var(--ink);
+}
+
+/* Vídeo em destaque */
+.video {
+  max-width: 64rem;
+  margin: 0 auto clamp(3.5rem, 7vw, 5rem);
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: center;
+}
+.video__media { position: relative; padding: 0 0 1.25rem 1.25rem; }
+.video__media::before {
+  content: "";
+  position: absolute;
+  inset: 1.25rem 1.25rem 0 0;
+  border: 6px solid var(--sun);
+  border-radius: 30px;
+  transform: skewX(-6deg);
+}
+.video__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--tide);
+  box-shadow: 0 24px 48px -24px rgba(22, 35, 42, 0.55);
+}
+.video__frame iframe,
+.video__play,
+.video__play img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video__play { padding: 0; background: none; cursor: pointer; }
+.video__play img { object-fit: cover; }
+.video__play::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(22, 35, 42, 0) 40%, rgba(22, 35, 42, 0.45) 100%);
+  transition: background-color 0.2s ease;
+}
+.video__play:hover::after { background-color: rgba(22, 35, 42, 0.15); }
+.video__icon {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--orange-btn);
+  color: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.video__icon svg { width: 2rem; height: 2rem; margin-left: 0.2rem; }
+.video__play:hover .video__icon { transform: translate(-50%, -50%) scale(1.07); background: var(--orange-btn-deep); }
+.video__play:focus-visible { outline-offset: -6px; }
+.video__fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.video__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--orange-btn);
+}
+.video__text h3 {
+  margin-top: 0.6rem;
+  font-size: var(--step-3);
+  color: var(--tide);
+}
+.video__text > p:not(.video__kicker) { margin-top: 1rem; color: var(--muted); }
+.video__text .btn { margin-top: 1.75rem; }
+
+@media (max-width: 860px) {
+  .video { grid-template-columns: 1fr; }
+  .video__icon { width: 4rem; height: 4rem; }
+  .video__icon svg { width: 1.6rem; height: 1.6rem; }
+}
 
 /* Siga */
 .follow { text-align: center; }

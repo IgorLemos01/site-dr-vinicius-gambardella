@@ -34,6 +34,23 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Vídeo do YouTube: carrega o player só quando a pessoa clica
+  document.querySelectorAll('.video__frame[data-video-id]').forEach(function (frame) {
+    var btn = frame.querySelector('.video__play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = frame.getAttribute('data-video-id');
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+      iframe.title = 'Vídeo do Dr. Vinícius Gambardella no YouTube';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.replaceChildren(iframe);
+      iframe.focus();
+    });
+  });
+
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 })();
