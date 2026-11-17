@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr. Vinícius Gambardella Souza | Médico em Aracaju</title>
   <meta name="description" content="Dr. Vinícius Gambardella Souza, médico em Aracaju (CRM-SE 6722). Atendimento no Centro Médico Alecrim, no Centro Médico Humanizado e consultas a domicílio. Agende pelo WhatsApp.">
-  <meta name="theme-color" content="#15343B">
+  <meta name="theme-color" content="#215056">
   <link rel="canonical" href="https://www.drviniciusgambardella.com.br/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -35,7 +35,15 @@
       "addressRegion": "SE",
       "addressCountry": "BR"
     },
-    "areaServed": "Aracaju - SE",
+    "areaServed": ["Aracaju - SE", "São Cristóvão - SE"],
+    "image": "https://www.drviniciusgambardella.com.br/assets/dr-vinicius-800.jpg",
+    "logo": "https://www.drviniciusgambardella.com.br/assets/logo.png",
+    "location": [
+      {"@type": "MedicalClinic", "name": "Centro Médico Alecrim", "telephone": "+55-79-99920-4776",
+       "address": {"@type": "PostalAddress", "streetAddress": "Rodovia João Bebe Água, 1623", "addressLocality": "São Cristóvão", "addressRegion": "SE", "addressCountry": "BR"}},
+      {"@type": "MedicalClinic", "name": "Centro Médico Humanizado de Sergipe", "telephone": "+55-79-98869-7666",
+       "address": {"@type": "PostalAddress", "streetAddress": "Rua Mariano Salmeron, 388, Siqueira Campos", "addressLocality": "Aracaju", "addressRegion": "SE", "addressCountry": "BR"}}
+    ],
     "identifier": "CRM-SE 6722",
     "sameAs": [
       "https://www.instagram.com/dr.viniciusgambardella/",
@@ -50,11 +58,7 @@
   <header class="topbar" id="topo">
     <div class="wrap topbar__inner">
       <a class="brand" href="#topo" aria-label="Dr. Vinícius Gambardella Souza, voltar ao início">
-        <span class="brand__mark" aria-hidden="true">VG</span>
-        <span class="brand__text">
-          <strong>Dr. Vinícius Gambardella</strong>
-          <small>Médico · CRM-SE 6722</small>
-        </span>
+        <img class="brand__logo" src="assets/logo.png" alt="Dr. Vinícius Gambardella, CRM SE 6722" width="640" height="267">
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
@@ -94,13 +98,15 @@
         </div>
 
         <figure class="hero__portrait">
-          <!-- Troque pelo retrato do médico: <img src="assets/dr-vinicius.jpg" alt="Dr. Vinícius Gambardella Souza" width="720" height="900"> -->
-          <div class="portrait-placeholder" role="img" aria-label="Espaço reservado para a foto do Dr. Vinícius Gambardella Souza">
-            <span>VG</span>
+          <div class="portrait-frame">
+            <picture>
+              <source type="image/webp" srcset="assets/dr-vinicius-800.webp 800w, assets/dr-vinicius.webp 1361w" sizes="(max-width: 860px) 90vw, 420px">
+              <img src="assets/dr-vinicius-800.jpg" alt="Dr. Vinícius Gambardella Souza, de jaleco branco, sentado em seu consultório" width="800" height="1204" fetchpriority="high">
+            </picture>
           </div>
           <figcaption>
             <strong>Dr. Vinícius Gambardella Souza</strong>
-            <span>Médico · CRM-SE 6722</span>
+            <span>Médico, CRM-SE 6722</span>
           </figcaption>
         </figure>
       </div>
@@ -130,23 +136,49 @@
           <li class="place">
             <svg class="place__ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-clinic"/></svg>
             <h3>Centro Médico Alecrim</h3>
-            <p class="place__kind">Presencial · Aracaju</p>
-            <p>Atendimento presencial em Aracaju. Para consultar disponibilidade, horários e informações sobre a unidade, entre em contato pelo WhatsApp.</p>
-            <a class="place__link" href="https://wa.me/5579998251112?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20no%20Centro%20M%C3%A9dico%20Alecrim." target="_blank" rel="noopener">Consultar disponibilidade</a>
+            <p class="place__kind">Atendimento presencial</p>
+            <p>Para consultar disponibilidade, horários e informações sobre a unidade, entre em contato pelo WhatsApp.</p>
+            <address class="place__info">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Centro+M%C3%A9dico+Alecrim%2C+Rodovia+Jo%C3%A3o+Bebe+%C3%81gua%2C+1623%2C+Madre+Paulina%2C+S%C3%A3o+Crist%C3%B3v%C3%A3o+-+SE" target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+                <span>Rodovia João Bebe Água, 1623, Madre Paulina, São Cristóvão/SE</span>
+              </a>
+              <a href="https://wa.me/5579999204776?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Vin%C3%ADcius%20Gambardella%20no%20Centro%20M%C3%A9dico%20Alecrim." target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+                <span>WhatsApp (79) 99920-4776</span>
+              </a>
+            </address>
+            <a class="btn btn--outline btn--block place__cta" href="https://wa.me/5579999204776?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Vin%C3%ADcius%20Gambardella%20no%20Centro%20M%C3%A9dico%20Alecrim." target="_blank" rel="noopener">Agendar no Centro Médico Alecrim</a>
           </li>
           <li class="place">
             <svg class="place__ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-heart"/></svg>
-            <h3>Centro Médico Humanizado</h3>
-            <p class="place__kind">Presencial · Aracaju</p>
-            <p>Atendimento presencial com foco em uma relação próxima e acolhedora. Consulte a disponibilidade de agenda e as orientações para marcação pelo WhatsApp.</p>
-            <a class="place__link" href="https://wa.me/5579998251112?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20no%20Centro%20M%C3%A9dico%20Humanizado." target="_blank" rel="noopener">Consultar disponibilidade</a>
+            <h3>Centro Médico Humanizado de Sergipe</h3>
+            <p class="place__kind">Atendimento presencial</p>
+            <p>Atendimento com foco em uma relação próxima e acolhedora. Consulte a disponibilidade de agenda e as orientações para marcação.</p>
+            <address class="place__info">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Centro+M%C3%A9dico+Humanizado%2C+Rua+Mariano+Salmeron%2C+388%2C+Siqueira+Campos%2C+Aracaju+-+SE" target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+                <span>Rua Mariano Salmeron, 388, Siqueira Campos, Aracaju/SE</span>
+              </a>
+              <a href="tel:+5579988697666">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-phone"/></svg>
+                <span>Telefone (79) 98869-7666</span>
+              </a>
+            </address>
+            <a class="btn btn--outline btn--block place__cta" href="tel:+5579988697666">Ligar para o Centro Médico Humanizado</a>
           </li>
           <li class="place place--home">
             <svg class="place__ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-home"/></svg>
             <h3>Consultas a domicílio</h3>
-            <p class="place__kind">Na sua casa · mediante disponibilidade</p>
+            <p class="place__kind">Na sua casa, mediante disponibilidade</p>
             <p>Para situações em que o atendimento em casa seja adequado, consulte previamente a disponibilidade, a região atendida e as condições para agendamento.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/5579998251112?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20uma%20consulta%20a%20domic%C3%ADlio." target="_blank" rel="noopener">
+            <address class="place__info">
+              <a href="https://wa.me/5579998251112?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20uma%20consulta%20a%20domic%C3%ADlio." target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+                <span>WhatsApp (79) 99825-1112</span>
+              </a>
+            </address>
+            <a class="btn btn--wa btn--block place__cta" href="https://wa.me/5579998251112?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20hor%C3%A1rios%20para%20uma%20consulta%20a%20domic%C3%ADlio." target="_blank" rel="noopener">
               <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
               Consultar horários e agendar
             </a>
@@ -225,7 +257,11 @@
             <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
             Falar pelo WhatsApp
           </a>
-          <p class="cta__number">(79) 99825-1112</p>
+          <ul class="cta__phones" role="list">
+            <li><span>Consultas a domicílio</span> <a href="https://wa.me/5579998251112" target="_blank" rel="noopener">(79) 99825-1112</a></li>
+            <li><span>Centro Médico Alecrim</span> <a href="https://wa.me/5579999204776" target="_blank" rel="noopener">(79) 99920-4776</a></li>
+            <li><span>Centro Médico Humanizado</span> <a href="tel:+5579988697666">(79) 98869-7666</a></li>
+          </ul>
         </div>
 
         <div class="social">
@@ -233,7 +269,7 @@
           <a class="social__item" href="https://www.instagram.com/dr.viniciusgambardella/" target="_blank" rel="noopener">
             <svg class="social__ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-ig"/></svg>
             <span>
-              <strong>Instagram · @dr.viniciusgambardella</strong>
+              <strong>Instagram @dr.viniciusgambardella</strong>
               <small>Acompanhe conteúdos, orientações gerais e um pouco da minha rotina médica.</small>
             </span>
           </a>
@@ -253,8 +289,9 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div>
+        <img class="footer__logo" src="assets/logo.png" alt="" width="640" height="267" loading="lazy">
         <p class="footer__name">Dr. Vinícius Gambardella Souza</p>
-        <p>Médico · CRM-SE 6722</p>
+        <p>Médico, CRM-SE 6722</p>
         <p>Aracaju – Sergipe</p>
       </div>
       <p class="footer__legal">As informações deste site são educativas e não substituem consulta, diagnóstico ou tratamento individualizado. O contato digital não deve ser utilizado para situações de emergência.</p>
@@ -275,6 +312,8 @@
     <symbol id="i-clinic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7l8-4 8 4v14"/><path d="M2 21h20"/><path d="M12 8v6M9 11h6"/><path d="M10 21v-3h4v3"/></g></symbol>
     <symbol id="i-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20Z"/><path d="M7 12h2.5l1.2-2 2 4 1.3-2H17"/></g></symbol>
     <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M12 12v5M9.5 14.5h5"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M6.6 3.5h2.6l1.4 4.1-1.9 1.4a11.5 11.5 0 0 0 5.8 5.8l1.4-1.9 4.1 1.4v2.6a2 2 0 0 1-2.1 2A16.4 16.4 0 0 1 4.6 5.6a2 2 0 0 1 2-2.1Z"/></symbol>
     <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></g></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.2 5 2.8-5 2.8Z" fill="currentColor"/></g></symbol>
   </svg>

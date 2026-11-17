@@ -9,11 +9,16 @@ Site institucional de página única (HTML, CSS e JS puros, sem build).
 - `assets/` — favicon e imagens
 
 ## Antes de publicar
-1. **Foto do médico:** salve em `assets/dr-vinicius.jpg` (retrato vertical, ~720×900) e troque o bloco `portrait-placeholder` no `index.html` pela tag `<img>` comentada logo acima dele.
-2. **Imagem de compartilhamento:** `assets/og-image.jpg` (1200×630).
+1. **Foto do médico:** já incluída em `assets/dr-vinicius-800.jpg` e `.webp`. Para trocar, substitua esses arquivos mantendo os nomes.
+2. **Imagem de compartilhamento:** `assets/og-image.jpg` (1200×630), gerada a partir da foto.
 3. **Domínio:** o site usa `https://www.drviniciusgambardella.com.br/` como exemplo em `index.html`, `robots.txt` e `sitemap.xml`. Troque pelo domínio real.
 4. **YouTube:** confirme o endereço do canal (hoje `https://www.youtube.com/@dr.viniciusgambardella`).
-5. **WhatsApp:** todos os botões usam (79) 99825-1112 com mensagens pré-preenchidas diferentes por local. Se as clínicas tiverem números próprios, troque nos links correspondentes.
+5. **Contatos:** consultas a domicílio (79) 99825-1112 (WhatsApp); Centro Médico Alecrim (79) 99920-4776 (WhatsApp); Centro Médico Humanizado de Sergipe (79) 98869-7666 (ligação).
+
+## Identidade visual
+- Mirage `#16232A`, Deep Sea Green `#215056`, Blaze Orange `#EB5835` (cor da logo), Wild Sand `#E4EEF0`
+- Botões laranja usam `#C9431F`, um tom mais escuro, para o texto branco ter contraste legível
+- Fontes: Quicksand (títulos, próxima da logo) e Atkinson Hyperlegible (texto)
 
 ## Ver localmente
 ```bash
