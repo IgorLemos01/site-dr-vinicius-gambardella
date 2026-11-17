@@ -13,7 +13,7 @@ Layout inspirado em drcarlospassos.com: topo com foto em tela cheia e três bot�
 ## Antes de publicar
 1. **Fotos do médico:** `assets/hero.webp`/`hero.jpg` (topo no computador), `assets/hero-mobile.webp` (topo no celular), `assets/dr-vinicius-sobre.webp`/`.jpg` (seção Sobre mim) e `assets/dr-vinicius-800.jpg` (dados para o Google). Para trocar, substitua os arquivos mantendo os nomes.
 2. **Imagem de compartilhamento:** `assets/og-image.jpg` (1200×630), gerada a partir da foto.
-3. **Domínio:** o site usa `https://www.drviniciusgambardella.com.br/` como exemplo em `index.html`, `robots.txt` e `sitemap.xml`. Troque pelo domínio real.
+3. **Domínio:** o site está publicado em https://igorlemos01.github.io/site-dr-vinicius-gambardella/ (GitHub Pages, ramo `gh-pages`). Ao usar um domínio próprio, troque esse endereço em `index.html`, `robots.txt` e `sitemap.xml` e configure o domínio em Settings → Pages.
 4. **YouTube:** canal `https://www.youtube.com/@viniciusgambardella`. O vídeo em destaque fica em `data-video-id` no `index.html` (seção Conteúdos); para trocar, substitua o ID nele e na URL da miniatura.
 5. **Contatos:** consultas a domicílio (79) 99825-1112 (WhatsApp); Centro Médico Alecrim (79) 99920-4776 (WhatsApp); Centro Médico Humanizado de Sergipe (79) 98869-7666 (ligação).
 
