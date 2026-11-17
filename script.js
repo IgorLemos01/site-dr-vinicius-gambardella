@@ -7,12 +7,14 @@
   function closeMenu() {
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
+    onScroll();
   }
 
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
+      onScroll();
     });
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) closeMenu();
@@ -26,7 +28,8 @@
   }
 
   function onScroll() {
-    topbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    var menuOpen = nav && nav.classList.contains('is-open');
+    topbar.classList.toggle('is-scrolled', window.scrollY > 40 || menuOpen);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
